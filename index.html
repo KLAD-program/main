@@ -1,1 +1,211 @@
-<p>test</p>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KLAD - Главная</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #ffffff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #00a8ff;
+        }
+        .language-switcher {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+        .language-switcher button {
+            background-color: #00a8ff;
+            color: #ffffff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 5px;
+        }
+        .language-switcher button:hover {
+            background-color: #0077b6;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #00a8ff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .description {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+            color: #ccc;
+        }
+        .cards {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .card {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h3 {
+            color: #00a8ff;
+            margin-top: 0;
+        }
+        .card p {
+            color: #ccc;
+        }
+        .code-table {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .code-block {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .code-block h3 {
+            color: #00a8ff;
+            margin-top: 0;
+        }
+        pre {
+            background-color: #1e1e1e;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: "Courier New", monospace;
+            color: #f8f8f2;
+        }
+        .cpp-block pre {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="language-switcher">
+        <button onclick="switchLanguage('ru')">Русский</button>
+        <button onclick="switchLanguage('en')">English</button>
+    </div>
+    <nav>
+        <a href="index.html" data-lang="ru">Главная</a>
+        <a href="download.html" data-lang="ru">Скачать</a>
+        <a href="info.html" data-lang="ru">Дополнительно</a>
+    </nav>
+    <div class="container">
+        <h1 data-lang="ru">Язык программирования KLAD</h1>
+        <h1 data-lang="en" style="display: none;">KLAD Programming Language</h1>
+        <p class="description" data-lang="ru">
+            Мультипарадигмальный высокоуровневый язык программирования специального назначения с динамической строгой типизацией и автоматическим управлением памятью, ориентированный на повышение производительности разработчика, читаемости кода и его качества, а также на обеспечение переносимости написанных на нём программ.
+        </p>
+        <p class="description" data-lang="en" style="display: none;">
+            A multi-paradigm high-level programming language for special purposes with dynamic strong typing and automatic memory management, focused on increasing developer productivity, code readability and quality, as well as ensuring the portability of programs written in it.
+        </p>
+
+        <h2 data-lang="ru">Преимущества KLAD</h2>
+        <h2 data-lang="en" style="display: none;">Advantages of KLAD</h2>
+        <div class="cards">
+            <div class="card">
+                <h3 data-lang="ru">Универсальность</h3>
+                <h3 data-lang="en" style="display: none;">Versatility</h3>
+                <p data-lang="ru">На KLAD можно писать как бекенд, так и фронтенд. Один язык — для всех задач!</p>
+                <p data-lang="en" style="display: none;">With KLAD, you can write both backend and frontend. One language for all tasks!</p>
+            </div>
+            <div class="card">
+                <h3 data-lang="ru">Производительность</h3>
+                <h3 data-lang="en" style="display: none;">Performance</h3>
+                <p data-lang="ru">Высокая скорость выполнения программ, благодаря оптимизированному интерпретатору.</p>
+                <p data-lang="en" style="display: none;">High execution speed thanks to an optimized interpreter.</p>
+            </div>
+            <div class="card">
+                <h3 data-lang="ru">Читаемость</h3>
+                <h3 data-lang="en" style="display: none;">Readability</h3>
+                <p data-lang="ru">Чистый и понятный синтаксис, который делает код легким для понимания и поддержки.</p>
+                <p data-lang="en" style="display: none;">Clean and intuitive syntax that makes code easy to understand and maintain.</p>
+            </div>
+        </div>
+
+        <h2 data-lang="ru">Сравнение синтаксиса</h2>
+        <h2 data-lang="en" style="display: none;">Syntax Comparison</h2>
+        <div class="code-table">
+            <div class="code-block">
+                <h3 data-lang="ru">KLAD</h3>
+                <h3 data-lang="en" style="display: none;">KLAD</h3>
+                <pre><code class="language-klad">output("Hello World!");</code></pre>
+            </div>
+            <div class="code-block">
+                <h3 data-lang="ru">Python</h3>
+                <h3 data-lang="en" style="display: none;">Python</h3>
+                <pre><code class="language-python">print("Hello World!")</code></pre>
+            </div>
+            <div class="code-block cpp-block">
+                <h3 data-lang="ru">C++</h3>
+                <h3 data-lang="en" style="display: none;">C++</h3>
+                <pre><code class="language-cpp">#include &lt;iostream&gt;
+
+int main() {
+    std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl;
+    return 0;
+}</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            document.querySelectorAll('[data-lang]').forEach(el => {
+                el.style.display = 'none';
+            });
+            document.querySelectorAll(`[data-lang="${lang}"]`).forEach(el => {
+                el.style.display = '';
+            });
+
+            document.querySelectorAll('nav a').forEach(link => {
+                if (lang === 'ru') {
+                    link.textContent = link.getAttribute('data-lang') === 'ru' ? link.textContent : '';
+                } else if (lang === 'en') {
+                    link.textContent = link.getAttribute('data-lang') === 'en' ? link.textContent : '';
+                }
+            });
+        }
+
+        switchLanguage('ru');
+    </script>
+</body>
+</html>
